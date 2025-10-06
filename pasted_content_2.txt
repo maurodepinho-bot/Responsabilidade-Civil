@@ -1,0 +1,69 @@
+O utilizador maurocamposdepinho@gmail.com do Google Ads partilhou uma etiqueta de acompanhamento para acompanhar conversões no seu Website. Para adicionar esta etiqueta ao Website, siga as instruções abaixo.
+
+Como utilizar a etiqueta
+
+Para garantir o funcionamento do acompanhamento de conversões, tem de instalar a etiqueta de acompanhamento de conversões, que consiste numa etiqueta da Google e num fragmento do evento. Se instalar a etiqueta com o Gestor de Etiquetas da Google, siga estas instruções em alternativa.
+
+Se alguma das suas páginas Web for criada através de AMP, tem de adicionar etiquetas às versões AMP e HTML. São incluídas instruções para ambas.
+
+PÁGINAS HTML
+
+Instale a etiqueta da Google em todas as páginas do seu Website.
+Abra o HTML de cada página.
+Escolha uma das opções seguintes:
+Se não instalou a etiqueta da Google no seu Website, copie a etiqueta abaixo e cole-a entre as etiquetas head (<head></head>):
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-608190853"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-608190853'); </script>
+
+Veja mais diretrizes sobre como configurar a etiqueta da Google.
+
+Se instalou a etiqueta da Google no seu Website a partir de outro produto Google (exemplo: Google Analytics) ou a partir de outra conta do Google Ads, copie o comando "config" abaixo e adicione-o a todas as ocorrências da etiqueta da Google, logo acima da etiqueta de fim </script>.
+
+gtag('config', 'AW-608190853');
+
+Se a etiqueta da Google já foi instalada no seu Website por si ou por uma conta de gestor ao configurar a etiqueta para outra ação de conversão, certifique-se de que a etiqueta está presente em todas as páginas do Website e verifique se o comando "config" tem este ID de conversão da conta do Google Ads: AW-608190853
+Guarde as alterações às suas páginas Web.
+
+Instale o fragmento do evento na página de conversão. Esta é a página a que os clientes acedem no seu Website depois de concluírem uma conversão, a página "Obrigado pela sua encomenda", por exemplo.
+Abra o HTML da página de conversão.
+Copie o fragmento abaixo e cole-o entre as etiquetas head (<head></head>) da página, logo após a etiqueta da Google.
+
+<!-- Event snippet for Website lead conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-608190853/rRbDCMSw5eEBEIWDgaIC'}); </script>
+
+Guarde as alterações à sua página Web.
+PÁGINAS AMP
+
+Deve seguir estas instruções para quaisquer páginas criadas através do framework AMP.
+
+Instale a etiqueta da Google em todas as páginas do seu Website.
+Abra o HTML de cada página.
+Escolha uma das opções seguintes:
+Se não instalou a etiqueta da Google no seu Website, adicione estas duas etiquetas:
+Primeiro, copie a etiqueta abaixo e cole-a entre as etiquetas head (<head></head>), antes da biblioteca JS AMP.
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+Em seguida, copie a etiqueta abaixo e cole-a entre as etiquetas body (<body></body>) de todas as suas páginas AMP.
+
+<!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include"> <script type="application/json"> { "vars": { "gtag_id": "AW-608190853", "config": { "AW-608190853": { "groups": "default" } } }, "triggers": { } } </script> </amp-analytics>
+
+Veja mais diretrizes sobre como configurar a etiqueta da Google.
+Se instalou a etiqueta da Google no seu Website a partir de outro produto Google (exemplo: Google Analytics) ou a partir de outra conta do Google Ads, copie a linha abaixo e inclua-a na secção "config" de todas as ocorrências da etiqueta da Google.
+
+"AW-608190853": { "groups": "default" }
+
+Se a etiqueta da Google já foi instalada no seu Website por si ou por uma conta de gestor durante a configuração da etiqueta para outra ação de conversão, certifique-se de que a etiqueta está presente em todas as páginas do Website e verifique se a secção "config" tem este ID de conversão da conta do Google Ads: AW-608190853
+Guarde as alterações às suas páginas Web.
+
+Instale o fragmento do evento na página de conversão. Esta é a página a que os clientes acedem no seu Website depois de concluírem uma conversão, a página "Obrigado pela sua encomenda", por exemplo.
+Abra o HTML da página de conversão.
+Copie o fragmento abaixo e cole-o na secção "triggers" da etiqueta da Google.
+
+"C_kIO5bIDJJxI": { "on": "visible", "vars": { "event_name": "conversion", "send_to": ["AW-608190853/rRbDCMSw5eEBEIWDgaIC"] } }
+
+Guarde as alterações à sua página Web.
+Saiba como adicionar uma etiqueta de acompanhamento de conversões ao Website.
+
+Obrigado,
+
+A equipa do Google Ads
